@@ -1,22 +1,23 @@
 float calc_power_r(float volt, float resistance)
 {
-  float poweredBy = 2;
-  float u_poweredBy = 0;
-  float effect;
+  float exponent = 2;
+  float voltPoweredByExponent;
 
-  for (int i = 0; i < poweredBy; i++)
+  float power;
+
+  for (int i = 0; i < exponent; i++)
   {
-    if (u_poweredBy == 0)
+    if (voltPoweredByExponent == 0)
     {
-      u_poweredBy = volt;
+      voltPoweredByExponent = volt;
     }
     else
     {
-      u_poweredBy *= volt;
+      voltPoweredByExponent *= volt;
     }
   }
 
-  effect = u_poweredBy / resistance;
+  power = voltPoweredByExponent / resistance;
 
-  return effect;
+  return power;
 }
