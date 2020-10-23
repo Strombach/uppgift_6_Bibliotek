@@ -1,7 +1,7 @@
 float calc_power_r(float volt, float resistance)
 {
   float exponent = 2;
-  float voltPoweredByExponent;
+  float voltPoweredByExponent = 0;
 
   float power;
 
