@@ -26,8 +26,10 @@ all:lib electrotest.c
 	mv ./*.so ./lib/
 	$(CC) -o $(execName) electrotest.o -L./lib -lcomponent -lpower -lresistance -Wl,-rpath,./lib
 
+# NEEDS ROOT-PRIVILEGES
 install: lib electrotest.c
 	mv ./*.so $(lPath)
 	ldconfig
 	$(CC) -c electrotest.c
 	$(CC) -o $(execName) electrotest.o -lcomponent -lpower -lresistance
+	mv $(execName) $(bPath)
