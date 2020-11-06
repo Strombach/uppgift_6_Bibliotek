@@ -47,15 +47,7 @@ int main()
 		}
 	
 	//Ersättningsresistans:
-	printf("count : %d\n", count);
-	printf("conn : %s\n", conn);
-	for (i=0;i < 3; i++) 
-		{
-    	printf("conn %d : %lf\n", i, array[i]);
-		}
-	
-
-	orig_resistance = calc_resistance(count, conn, array);
+	orig_resistance = calc_resistance(count, conn[0], array);
 
 	//Effekt:
 	current = volt / orig_resistance;
